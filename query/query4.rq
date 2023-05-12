@@ -1,0 +1,17 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sdm: <http://example.org/sdm#>
+
+SELECT DISTINCT ?paperTitle
+WHERE {
+    ?paper rdf:type sdm:Paper.
+    ?paper sdm:hasAuthor ?author.
+    ?author sdm:hasPersonName "authorName".
+    ?proceeding rdf:type sdm:Proceeding.
+    ?paper sdm:publishedIn ?proceeding.
+    ?conference rdf:type sdm:Conference.
+    ?conference sdm:hasPublished ?proceeding.
+    ?area sdm:hasTopicName "database".
+    ?conference sdm:venueRelatedTo ?area.
+    ?paper sdm:paperTitle ?paperTitle.
+}
