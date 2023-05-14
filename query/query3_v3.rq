@@ -1,0 +1,23 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sdm: <http://example.org/sdm#>
+
+SELECT DISTINCT ?property
+WHERE {
+  {
+    ?property rdfs:domain sdm:Conference.
+  }
+  UNION
+  {
+    sdm:Conference rdfs:subClassOf* ?superclass.
+    ?property rdfs:domain ?superclass.
+  }
+  UNION
+  {
+    ?property rdfs:domain sdm:Journal.
+  }
+  UNION
+  {
+    sdm:Journal rdfs:subClassOf* ?superclass.
+    ?property rdfs:domain ?superclass.
+  }
+}
