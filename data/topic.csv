@@ -1,0 +1,27 @@
+id,topic,fake,community
+Psychology,Psychology,0,Pure Science
+Medicine,Medicine,0,Applied Science
+Computer Science,Computer Science,0,Pure Science
+Political Science,Political Science,0,Social Science
+Chemistry,Chemistry,0,Pure Science
+Biology,Biology,0,Pure Science
+Business,Business,0,Applied Science
+Engineering,Engineering,0,Applied Science
+Sociology,Sociology,0,Social Science
+Materials Science,Materials Science,0,Applied Science
+Physics,Physics,0,Pure Science
+Art,Art,0,Social Science
+Geography,Geography,0,Social Science
+Geology,Geology,0,Pure Science
+History,History,0,Social Science
+Philosophy,Philosophy,0,Social Science
+Environmental Science,Environmental Science,0,Applied Science
+Mathematics,Mathematics,0,Pure Science
+Economics,Economics,0,Social Science
+Data Management,Data Management,1,Database
+Indexing,Indexing,1,Database
+Data Modeling,Data Modeling,1,Database
+Big Data,Big Data,1,Database
+Data Processing,Data Processing,1,Database
+Data Storage,Data Storage,1,Database
+Data Querying,Data Querying,1,Database
