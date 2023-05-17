@@ -11,10 +11,13 @@ WHERE {
     sdm:Conference rdfs:subClassOf* ?superclass.
     ?property rdfs:domain ?superclass.
   }
+# The following block of code is optional because in our schema, no property is related to Journal
+# --------------------------------------
   UNION
   {
     ?property rdfs:domain sdm:Journal.
   }
+# --------------------------------------
   UNION
   {
     sdm:Journal rdfs:subClassOf* ?superclass.

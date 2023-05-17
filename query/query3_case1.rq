@@ -5,7 +5,11 @@ SELECT ?property
 WHERE {
   {
     ?property rdfs:domain sdm:Conference.
-  } UNION {
+  } 
+# The following block of code is optional because in our schema, no property is related to Journal
+# --------------------------------------
+UNION {
     ?property rdfs:domain sdm:Journal.
   }
+# --------------------------------------
 }
