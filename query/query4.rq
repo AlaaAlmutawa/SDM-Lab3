@@ -1,17 +1,15 @@
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX sdm: <http://example.org/sdm#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 
-SELECT DISTINCT ?paperTitle
+SELECT ?paper
 WHERE {
-    ?paper rdf:type sdm:Paper.
+    ?v sdm:venueRelatedTo ?area.
+    ?v rdf:type sdm:Conference. 
+    ?v sdm:hasPublished ?pub.
+    ?area sdm:hasTopicName "Database".
+    ?paper sdm:publishedIn ?pub. 
     ?paper sdm:hasAuthor ?author.
-    ?author sdm:hasPersonName "authorName".
-    ?proceeding rdf:type sdm:Proceeding.
-    ?paper sdm:publishedIn ?proceeding.
-    ?conference rdf:type sdm:Conference.
-    ?conference sdm:hasPublished ?proceeding.
-    ?area sdm:hasTopicName "database".
-    ?conference sdm:venueRelatedTo ?area.
-    ?paper sdm:paperTitle ?paperTitle.
+    ?paper sdm:paperTitle ?title. 
+    ?author sdm:hasPersonName "P. Delmote"  
 }
