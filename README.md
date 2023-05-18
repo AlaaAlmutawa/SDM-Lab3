@@ -25,7 +25,6 @@ TBOX and ABOX separately	|	During import into GraphDB (RDFS)	|	B1, B2-B3	|	outpu
 TBOX, ABOX Instances, and RDF type links separately	|	During import into GraphDB (RDFS)	|	B1, B2, B3	|	output_tbox, output_abox, output_links
 TBOX and ABOX in same file	|	Before importing to GraphDB via Python RDFLib Library (RDFS Closure)	|	B	|	output_graph_inference
 
-Notes:
-- Inference ruleset pertains to when inference is activated. There are two cases: 
-    1. During import into GraphDB in which inference must be turned on and the ruleset chosen must be RDFS, 
-    2. Before importing into GraphDB and during TBOX and ABOX creation via Python's RDFLibrary. Before saving as a xmd file, RDFS Closure via the owlrl library is called to generate inferred triples.
+Inference ruleset pertains to when inference is activated. There are two cases: 
+1. During import into GraphDB in which inference must be turned on and the ruleset chosen must be RDFS, 
+2. Before importing into GraphDB and during TBOX and ABOX creation via Python's RDFLibrary. Before saving as a xmd file, RDFS Closure via the owlrl library is called to generate inferred triples.
