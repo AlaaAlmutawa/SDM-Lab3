@@ -1,7 +1,7 @@
 # Lab3: Knowledge Graphs
-In partial fulfillment of Semantic Data Management Course, Universitat Politècnica de Catalunya
-Authors: Adina Bondoc, Alaa Almutawa, You Xu
-Supervised by: Prof. Oscar Romero, Prof. Javier Flores
+- In partial fulfillment of Semantic Data Management Course, Universitat Politècnica de Catalunya
+- Authors: Adina Bondoc, Alaa Almutawa, You Xu
+- Supervised by: Prof. Oscar Romero, Prof. Javier Flores
 
 ## Description
 This repository contains code for generating the TBOX, ABOX, and queries for a knowledge graph of scholarly articles submitted to and published in conferences and journals.
@@ -12,9 +12,9 @@ To run this, the root directory must have the following folders:
 2. output: this is where all rdf files will be saved to
 
 Required python libraries:
-rdflib
-owlrl
-Faker
+- rdflib
+- owlrl
+- Faker
 
 ## How to run
 There are 2 ways to generate
