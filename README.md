@@ -28,3 +28,12 @@ TBOX and ABOX in same file	|	Before importing to GraphDB via Python RDFLib Libra
 Inference ruleset pertains to when inference is activated. There are two cases: 
 1. During import into GraphDB in which inference must be turned on and the ruleset chosen must be RDFS, 
 2. Before importing into GraphDB and during TBOX and ABOX creation via Python's RDFLibrary. Before saving as a xmd file, RDFS Closure via the owlrl library is called to generate inferred triples.
+
+## SPARQL queries
+In folder ```/queries```, there are 4 SPARQL queries to explore the database. They can:
+- Find all Authors by executing ```query1```
+- Find all properties whose domain is specifically only Author, not including the inherited properties from its superclass by executing ```query2_case1```
+- Find all properties whose domain is Author and its superclasses, which includes the inherited properties by executing ```query2_case2```
+- Find all properties whose domain is specifically either Conference or Journal. not including the inherited properties from their superclasses by executing ```query3_case1```
+- Find all properties whose domain is Conference or Journal, and their superclasses, which includes the inherited properties by executing ```query3_case2```
+- Find all the papers written by a Yunpeng Liu that where published in database conferences by executing ```query4```
