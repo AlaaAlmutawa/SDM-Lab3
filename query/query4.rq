@@ -11,5 +11,5 @@ WHERE {
     ?paper sdm:publishedIn ?pub. 
     ?paper sdm:hasAuthor ?author.
     ?paper sdm:paperTitle ?title. 
-    ?author sdm:hasPersonName "P. Delmote"  
+    ?author sdm:hasPersonName "Yunpeng Liu"  
 }

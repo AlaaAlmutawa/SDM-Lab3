@@ -17,13 +17,14 @@ Required python libraries:
 - Faker
 
 ## How to run
-There are 2 ways to generate
-1. Separate TBOX and ABOX files: 
-    - Run *abox_gen* and *tbox_gen*. This should generate the following output in the output folder: *output_abox.rdf* and *output_abox.rdf*
-    - In GraphDB, import these two files and load into a graph, with ruleset **OWLRL (Optimized)**
-2. Combined TBOX and ABOX file
-    - Run *tbox_abox_gen* and this should generate the following output in the output folder: *output_graph_inference.rdf*
-    - In GraphDB, import this file and load into a graph, with ruleset **RDFS Plus (Optimized)**
-    - Note: python code makes use of the owlrl library to activate inference via RDFS Closure before saving into xml
+There are 3 ways to generate a working graph in GraphDB, as illustrated in the table below:
 
-Note: In the code folder, codes are made available in both .py and jupyter notebook format but in general have the same content so running in either format should give the same output.
+Definition |	Inference Ruleset	|	Code (Group-*-AlmutawaBondocXu.py)	|	Output (.rdf)
+--- | --- | --- | --- 
+TBOX and ABOX separately	|	During import into GraphDB (RDFS)	|	B1, B2-B3	|	output_tbox, output_abox
+TBOX, ABOX Instances, and RDF type links separately	|	During import into GraphDB (RDFS)	|	B1, B2, B3	|	output_tbox, output_abox, output_links
+TBOX and ABOX in same file	|	Before importing to GraphDB via Python RDFLib Library (RDFS Closure)	|	B	|	output_graph_inference
+
+Inference ruleset pertains to when inference is activated. There are two cases: 
+1. During import into GraphDB in which inference must be turned on and the ruleset chosen must be RDFS, 
+2. Before importing into GraphDB and during TBOX and ABOX creation via Python's RDFLibrary. Before saving as a xmd file, RDFS Closure via the owlrl library is called to generate inferred triples.
