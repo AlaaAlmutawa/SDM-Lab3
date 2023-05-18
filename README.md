@@ -8,8 +8,8 @@ This repository contains code for generating the TBOX, ABOX, and queries for a k
 
 ## Set up
 To run this, the root directory must have the following folders:
-1. data: this folder will contain all the initial csv files of data generated from SDM Lab 1 of Bondoc and Ganepola
-2. output: this is where all rdf files will be saved to
+1. ```/data```: this folder will contain all the initial csv files of data generated from SDM Lab 1 of Bondoc and Ganepola
+2. ```/output```: this is where all rdf files will be saved to
 
 Required python libraries:
 - rdflib
