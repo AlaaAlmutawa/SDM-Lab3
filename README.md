@@ -1,6 +1,6 @@
 # Lab3: Knowledge Graphs
 - In partial fulfillment of Semantic Data Management Course, Universitat Politècnica de Catalunya
-- Authors: Adina Bondoc, Alaa Almutawa, You Xu
+- Authors: Alaa Almutawa, Adina Bondoc, You Xu
 - Supervised by: Prof. Oscar Romero, Prof. Javier Flores
 
 ## Description
