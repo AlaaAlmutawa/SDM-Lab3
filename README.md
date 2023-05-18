@@ -30,7 +30,7 @@ Inference ruleset pertains to when inference is activated. There are two cases:
 2. Before importing into GraphDB and during TBOX and ABOX creation via Python's RDFLibrary. Before saving as a xmd file, RDFS Closure via the owlrl library is called to generate inferred triples.
 
 ## SPARQL queries
-In folder ```/queries```, there are 4 SPARQL queries to explore the database. They can:
+In folder ```/query```, there are 4 SPARQL queries to explore the database. They can:
 - Find all Authors by executing ```query1```
 - Find all properties whose domain is specifically only Author, not including the inherited properties from its superclass by executing ```query2_case1```
 - Find all properties whose domain is Author and its superclasses, which includes the inherited properties by executing ```query2_case2```
