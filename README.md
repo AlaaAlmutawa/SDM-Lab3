@@ -21,9 +21,9 @@ There are 3 ways to generate a working graph in GraphDB, as illustrated in the t
 
 Definition |	Inference Ruleset	|	Code (Group-*-AlmutawaBondocXu.py)	|	Output (.rdf)
 --- | --- | --- | --- 
-TBOX and ABOX separately	|	During import into GraphDB (RDFS)	|	B1, B2-B3	|	output_tbox, output_abox
-TBOX, ABOX Instances, and RDF type links separately	|	During import into GraphDB (RDFS)	|	B1, B2, B3	|	output_tbox, output_abox, output_links
-TBOX and ABOX in same file	|	Before importing to GraphDB via Python RDFLib Library (RDFS Closure)	|	B	|	output_graph_inference
+TBOX and ABOX separately (links within ABOX)	| During import into GraphDB (OWL2-RL)	|	B1, B2-B3	|	output_tbox, output_abox
+TBOX, ABOX Instances, and RDF type links separately	|	During import into GraphDB (OWL2-RL)	|	B1, B2, B3	|	output_tbox, output_abox, output_links
+TBOX, ABOX, links in one file	|	Before importing to GraphDB (RDFS Plus) via Python RDFLib Library (RDFS Closure)	|	B	|	output_graph_inference
 
 Inference ruleset pertains to when inference is activated. There are two cases: 
 1. During import into GraphDB in which inference must be turned on and the ruleset chosen must be RDFS, 
